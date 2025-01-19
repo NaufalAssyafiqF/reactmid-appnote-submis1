@@ -5,9 +5,9 @@ const LineBar = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="mx-20 my-20">
+    <div className="mx-20 mt-20 mb-10">
       <p
-        className={`max-w-[170px] py-3 text-center font-medium text-lg  text-black font-ibmPlexMono rounded-t-lg border-2 border-black  
+        className={`max-w-[170px] py-3 text-center font-medium text-lg  text-black font-ibmPlexMono rounded-t-lg border-x-2 border-t-2 border-black  
           ${pathname === "/" && "bg-[#8BD3DD]"}
           ${pathname === "/add" && "bg-[#8BD3DD]"}
           ${pathname === "/archive" && "bg-[#FAAE2B]"}
