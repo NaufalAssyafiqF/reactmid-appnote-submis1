@@ -1,12 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { showFormattedDate } from "../utils";
 
-const CardNote = () => {
+const CardNote = ({note}) => {
   const { pathname } = useLocation();
+  const textDate = showFormattedDate(note.createdAt);
   return (
     <Link
       to={"/view/112"}
-      className="max-w-[350px] h-fit flex flex-col items-end shadow-[9px_5px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-lg"
+      className="max-w-[350px] h-fit flex flex-col items-end shadow-[9px_5px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-lg hover:scale-105 transition duration-300"
     >
       <div
         className={`flex items-center justify-end  rounded-t-lg border-x-2 border-t-2 border-black  w-fit p-1 ${
@@ -14,7 +16,7 @@ const CardNote = () => {
         } `}
       >
         <p className="text-black font-comfortaa font-medium text-xs">
-          Senin, 12 Agustus 2025
+          {textDate}
         </p>
       </div>
       <div
@@ -22,13 +24,10 @@ const CardNote = () => {
         style={{ borderRadius: "5px 0 5px 5px" }}
       >
         <h1 className="text-black font-ibmPlexMono font-medium text-2xl mb-2">
-          Modularization
+          {note.title}
         </h1>
         <p className="w-full h-full text-black font-comfortaa font-medium text-base overflow-hidden line-clamp-6 text-ellipsis">
-          Untuk memastikan panjang card Anda konsisten meskipun jumlah teks
-          berbeda-beda, Anda dapat mengatur maksimal jumlah karakter yang
-          ditampilkan dalam teks dan memotongnya jika melebihi batas tersebut.
-          Hal ini dapat dicapai dengan menggunakan CSS atau JavaScript.
+          {note.body}
         </p>
         
       </div>
