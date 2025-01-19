@@ -1,10 +1,21 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const CardNote = () => {
+  const { pathname } = useLocation();
   return (
-    <div className="max-w-[350px] h-fit flex flex-col items-end shadow-[9px_5px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-lg">
-      <div className="flex items-center justify-end bg-[#8BD3DD] rounded-t-lg border-x-2 border-t-2 border-black  w-fit p-1">
-        <p className="text-black font-comfortaa font-medium text-xs">Senin, 12 Agustus 2025</p>
+    <Link
+      to={"/view/112"}
+      className="max-w-[350px] h-fit flex flex-col items-end shadow-[9px_5px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-lg"
+    >
+      <div
+        className={`flex items-center justify-end  rounded-t-lg border-x-2 border-t-2 border-black  w-fit p-1 ${
+          pathname === "/" ? "bg-[#8BD3DD]" : "bg-[#FAAE2B]"
+        } `}
+      >
+        <p className="text-black font-comfortaa font-medium text-xs">
+          Senin, 12 Agustus 2025
+        </p>
       </div>
       <div
         className="w-full h-full bg-[#D9D9D9] rounded-lg border-2 border-black px-3 pt-2 pb-8"
@@ -19,8 +30,9 @@ const CardNote = () => {
           ditampilkan dalam teks dan memotongnya jika melebihi batas tersebut.
           Hal ini dapat dicapai dengan menggunakan CSS atau JavaScript.
         </p>
+        
       </div>
-    </div>
+    </Link>
   );
 };
 

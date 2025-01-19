@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "../components/SearchBar";
 import CardNote from "../components/CardNote";
+import AddButton from "../components/AddButton";
 
 const ActiveNote = () => {
   return (
@@ -12,7 +13,9 @@ const ActiveNote = () => {
         <CardNote />
         <CardNote />
         <CardNote />
+        <CardNote />
       </div>
+      <AddButton />
     </div>
   );
 };
