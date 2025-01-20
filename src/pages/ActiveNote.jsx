@@ -10,7 +10,7 @@ const ActiveNote = () => {
   const [activeNotes, setActiveNotes] = useState([]);
   const [keyword, setKeyword] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
-  
+
   const handleQuery = (keyword) => {
     setSearchParams({ keyword });
   };
@@ -19,7 +19,7 @@ const ActiveNote = () => {
     const keyword = searchParams.get("keyword") || "";
     setKeyword(keyword);
   }, [searchParams]);
-  
+
   useEffect(() => {
     if (!keyword) {
       setActiveNotes(getActiveNotes());
@@ -27,21 +27,23 @@ const ActiveNote = () => {
 
     handleQuery(keyword);
 
-    const searchNote = getActiveNotes().filter((note) => note.title.toLowerCase().includes(keyword.toLowerCase()));
+    const searchNote = getActiveNotes().filter((note) =>
+      note.title.toLowerCase().includes(keyword.toLowerCase())
+    );
 
     setActiveNotes(searchNote);
   }, [keyword]);
 
   return (
     <div className="mx-20 mb-20">
-      <Header/>
+      <Header />
       <SearchBar setKeyword={setKeyword} />
       <div className="flex flex-wrap gap-x-8 gap-y-8">
         {activeNotes.map((note) => (
           <CardNote key={note.id} note={note} />
         ))}
       </div>
-      {activeNotes.length == 0 && (
+      {!activeNotes.length && (
         <p className="text-center w-full font-ibmPlexMono font-medium">
           No Note Found
         </p>

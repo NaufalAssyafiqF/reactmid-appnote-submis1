@@ -1,6 +1,6 @@
-import React from 'react'
-import { IoMdAdd } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { IoMdAdd } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const AddButton = () => {
   return (
@@ -13,6 +13,6 @@ const AddButton = () => {
       </Link>
     </div>
   );
-}
+};
 
-export default AddButton
+export default AddButton;

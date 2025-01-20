@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { BiSolidArchiveIn, BiSolidArchiveOut } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
-import {
-  Navigate,
-  useNavigate,
-  useParams,
-  useSearchParams,
-} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   archiveNote,
   deleteNote,

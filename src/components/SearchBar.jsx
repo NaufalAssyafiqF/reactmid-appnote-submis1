@@ -25,7 +25,7 @@ const SearchBar = ({ setKeyword }) => {
 };
 
 SearchBar.propTypes = {
-  setKeyword: PropTypes.func
-}
+  setKeyword: PropTypes.func,
+};
 
 export default SearchBar;

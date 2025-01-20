@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const BtnNavigation = ({path, text}) => {
+const BtnNavigation = ({ path, text }) => {
   return (
     <Link
       to={path}
@@ -15,11 +15,11 @@ const BtnNavigation = ({path, text}) => {
       {text}
     </Link>
   );
-}
+};
 
 BtnNavigation.propTypes = {
   path: PropTypes.string,
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
-export default BtnNavigation
+export default BtnNavigation;

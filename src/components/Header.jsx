@@ -1,7 +1,6 @@
 import React from "react";
 import BtnNavigation from "./BtnNavigation";
-import LineBar from "./LineBar"
-
+import LineBar from "./LineBar";
 
 const Header = () => {
   return (

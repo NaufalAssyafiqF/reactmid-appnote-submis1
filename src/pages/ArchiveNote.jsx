@@ -42,7 +42,11 @@ const ArchiveNote = () => {
         {activeNotes.map((note) => (
           <CardNote key={note.id} note={note} />
         ))}
-        {activeNotes.length == 0 && <p className="text-center w-full font-ibmPlexMono font-medium">No Note Found</p>}
+        {!activeNotes.length && (
+          <p className="text-center w-full font-ibmPlexMono font-medium">
+            No Note Found
+          </p>
+        )}
       </div>
       <AddButton />
     </div>

@@ -36,7 +36,7 @@ const CardNote = ({ note }) => {
 };
 
 CardNote.propTypes = {
-  note: PropTypes.object
+  note: PropTypes.object,
 };
 
 export default CardNote;
