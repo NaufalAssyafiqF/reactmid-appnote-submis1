@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { useLocation } from "react-router-dom";
 
@@ -22,5 +23,9 @@ const SearchBar = ({ setKeyword }) => {
     </div>
   );
 };
+
+SearchBar.propTypes = {
+  setKeyword: PropTypes.func
+}
 
 export default SearchBar;

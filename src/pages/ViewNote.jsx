@@ -14,6 +14,7 @@ import {
   unarchiveNote,
 } from "../utils/local-data";
 import { showFormattedDate } from "../utils";
+import Header from "../components/Header";
 
 const ViewNote = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ const ViewNote = () => {
 
   return (
     <div className="mx-20 mb-20">
+      <Header />
       <div className="max-w-[90%] mx-auto h-fit flex flex-col items-start  rounded-lg">
         <div
           className={`flex items-center rounded-t-lg border-x-2 border-t-2 border-black  w-fit p-1 ${
