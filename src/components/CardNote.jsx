@@ -7,7 +7,7 @@ const CardNote = ({note}) => {
   const textDate = showFormattedDate(note.createdAt);
   return (
     <Link
-      to={"/view/112"}
+      to={`/view/${note.id}`}
       className="max-w-[350px] h-fit flex flex-col items-end shadow-[9px_5px_0px_0px_rgba(0,_0,_0,_0.8)] rounded-lg hover:scale-105 transition duration-300"
     >
       <div
